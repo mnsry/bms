@@ -13,7 +13,7 @@
     <link href="{{ asset('css/bootstrap.rtl.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="blockquote-footer">
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="check2" viewBox="0 0 16 16">
