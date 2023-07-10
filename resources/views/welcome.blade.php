@@ -34,36 +34,26 @@
         </div>
     @endif
 
-    <div class="album pt-2 bg-body-tertiary">
-        <div class="container">
-            <div class="row justify-content-center mx-1">
-                @foreach($pages as $page)
-                    <div class="card my-2" style="max-width: 1000px;">
-                        <div class="row">
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <a href="{{ route('page.posts', $page) }}"
-                                       class="link-body-emphasis link-underline link-underline-opacity-0">
-                                        <h5 class="card-title">{{ $page->title }}</h5>
-                                        <p class="card-text">{{ $page->excerpt }}</p>
-                                        <p class="card-text"><small
-                                                class="text-body-secondary">{{ $page->created_at->diffForHumans() }}</small>
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-4 py-2">
-                                <a href="{{ route('page.posts', $page) }}"
-                                   class="link-body-emphasis link-underline link-underline-opacity-0">
-                                    <img src="{{ Voyager::Image($page->image) }}" height="200"
-                                         class="card-img-top rounded"
-                                         alt="...">
-                                </a>
+    <div class="container-fluid bg-body-tertiary pt-2">
+        <div class="row justify-content-center">
+            @foreach($pages as $page)
+                <div class="card m-2 p-1" style="max-width: 400px;">
+                    <div class="row g-0">
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $page->title }}</h5>
+                                <p class="card-text">{{ $page->excerpt }}</p>
+                                <p class="card-text"><small
+                                        class="text-body-secondary">{{ $page->created_at->diffForHumans() }}</small></p>
                             </div>
                         </div>
+
+                        <div class="col-4">
+                            <img src="{{ Voyager::Image($page->image) }}" class="img-fluid rounded" alt="...">
+                        </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
     </div>
 
