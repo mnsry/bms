@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Form;
+use App\Models\Page;
+use App\Models\Post;
 use Illuminate\Http\Request;
-use TCG\Voyager\Models\Post;
 
 class SiteController extends Controller
 {
-    public function show(Post $post)
+    public function posts(Page $page)
+    {
+        return view('post.index',[
+            'page' => $page
+        ]);
+    }
+
+    public function post(Post $post)
     {
         return view('post.show',[
             'post' => $post
