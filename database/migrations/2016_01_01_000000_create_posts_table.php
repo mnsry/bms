@@ -23,6 +23,7 @@ class CreatePostsTable extends Migration
             $table->text('excerpt');
             $table->text('body');
             $table->string('image')->nullable();
+            $table->string('images')->nullable();
             $table->string('slug')->unique();
             $table->text('meta_description');
             $table->text('meta_keywords');
