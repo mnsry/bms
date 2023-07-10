@@ -9,7 +9,7 @@
     <section class="container px-4 py-5 my-5 text-center">
         <div class="row">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">BMS</h1>
+                <h1 class="fw-light">{{ $page->title }}</h1>
             </div>
         </div>
     </section>
