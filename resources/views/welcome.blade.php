@@ -41,10 +41,14 @@
                     <div class="row g-0">
                         <div class="col-8">
                             <div class="card-body">
+                                <a href="{{ route('page.posts', $page) }}">
                                 <h5 class="card-title">{{ $page->title }}</h5>
                                 <p class="card-text">{{ $page->excerpt }}</p>
-                                <p class="card-text"><small
-                                        class="text-body-secondary">{{ $page->created_at->diffForHumans() }}</small></p>
+                                <p class="card-text">
+                                    <small class="text-body-secondary">{{ $page->created_at->diffForHumans() }}
+                                    </small>
+                                </p>
+                                </a>
                             </div>
                         </div>
 
