@@ -1,5 +1,5 @@
-<footer class="container py-5">
-    <div class="row">
+<footer class="container">
+    <div class="row pt-4">
         <div class="col-12 col-md">
             <small class="d-block mb-3 text-body-secondary">&copy; 1392-1402</small>
         </div>

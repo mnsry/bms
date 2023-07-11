@@ -34,10 +34,10 @@
         </div>
     @endif
 
-    <div class="container-fluid bg-body-tertiary pt-2">
-        <div class="row justify-content-center">
+    <div class="container-fluid bg-body-tertiary">
+        <div class="row justify-content-center p-2">
             @foreach($pages as $page)
-                <div class="card m-2 p-1" style="max-width: 400px;">
+                <div class="card m-2 p-2" style="max-width: 400px;">
                     <div class="row g-0">
                         <div class="col-8">
                             <div class="card-body">
@@ -51,7 +51,6 @@
                                 </a>
                             </div>
                         </div>
-
                         <div class="col-4">
                             <img src="{{ Voyager::Image($page->image) }}" class="img-fluid rounded" alt="...">
                         </div>
