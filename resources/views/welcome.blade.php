@@ -41,7 +41,7 @@
                     <div class="row g-0">
                         <div class="col-8">
                             <div class="card-body">
-                                <a href="{{ route('page.posts', $page) }}">
+                                <a href="{{ route('page.posts', $page) }}" class="link-body-emphasis link-underline link-underline-opacity-0">
                                 <h5 class="card-title">{{ $page->title }}</h5>
                                 <p class="card-text">{{ $page->excerpt }}</p>
                                 <p class="card-text">
