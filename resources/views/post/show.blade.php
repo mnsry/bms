@@ -6,58 +6,41 @@
 
 @section('content')
 
-    <div class="album py-5">
-        <div class="container">
-            <div class="row pt-5">
-                <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="container-fluid bg-body-tertiary pt-5">
+        <div class="row p-1">
+            <div id="carous" class="carousel slide">
+                <div class="carousel-inner">
                     @php
                         $number = 0;
-                        $numb = 0;
                         $images = json_decode($post->images);
                     @endphp
-                    
-                    <div class="carousel-indicators">
-                        @foreach($images as $image)
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $num = $number++ }}"
-                                    @if($number == 1) class="active" @endif
-                                    aria-current="true" aria-label="Slide {{ $num }}">
-                                
-                            </button>
-                        @endforeach
-                    </div>
-                    
-                    <div class="carousel-inner">
-                        @foreach($images as $image)
-                            <div class="carousel-item {{ $numb++ }} @if($numb == 1) active @endif">
-                                <img src="{{ Voyager::image($post->getThumbnail($image, 'cropped')) }}" class="rounded mx-auto d-block w-100"
-                                     alt="...">
-                            </div>
-                        @endforeach
-                    </div>
-                    
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">قبلی</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">بعدی</span>
-                    </button>
+                    @foreach($images as $image)
+                        <div class="carousel-item {{ $number++ }} @if($number == 1) active @endif">
+                            <img src="{{ Voyager::Image($image) }}"
+                                 class="img-thumbnail "
+                                 alt="{{ $post->title }}">
+                        </div>
+                    @endforeach
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carous" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carous" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
-    
-    <section class="bg-body-secondary px-4 py-5 text-center">
+
+
+    <section class="container bg-body-secondary px-4 py-5 my-5 text-center">
         <div class="row">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <h1 class="fw-light">{{ $post->title }}</h1>
                 <p class="lead text-body-secondary">{{ $post->excerpt }}</p>
-                <p class="lead text-body-secondary">{!! $post->body !!}</p>
-
-            </div>
+                <p class="lead text-body-secondary">{!! $post->body !!}</p>            </div>
         </div>
     </section>
 
