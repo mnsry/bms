@@ -17,17 +17,14 @@
     <div class="container-fluid bg-body-tertiary">
         <div class="row justify-content-center p-2">
             @foreach($page->posts as $post)
-                <div class="card m-2 p-2" style="max-width: 400px;">
+                <div class="card m-2 p-1" style="max-width: 400px;">
                     <div class="row g-0">
                         <div class="col-8">
                             <div class="card-body">
-                                <a href="{{ route('post.show', $post) }}" class="link-body-emphasis link-underline link-underline-opacity-0">
+                                <a href="{{ route('post.show', $post) }}"
+                                   class="link-body-emphasis link-underline link-underline-opacity-0">
                                     <h5 class="card-title">{{ $post->title }}</h5>
-                                    <p class="card-text">{{ Str::limit($post->excerpt, 130) }}</p>
-                                    <p class="card-text">
-                                        <small class="text-body-secondary">{{ $post->created_at->diffForHumans() }}
-                                        </small>
-                                    </p>
+                                    <p class="card-text">{{ Str::limit($post->excerpt, 120) }}</p>
                                 </a>
                             </div>
                         </div>

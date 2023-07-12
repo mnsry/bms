@@ -37,17 +37,14 @@
     <div class="container-fluid bg-body-tertiary">
         <div class="row justify-content-center p-2">
             @foreach($pages as $page)
-                <div class="card m-2 p-2" style="max-width: 400px;">
+                <div class="card m-2 p-1" style="max-width: 400px;">
                     <div class="row g-0">
                         <div class="col-8">
                             <div class="card-body">
-                                <a href="{{ route('page.posts', $page) }}" class="link-body-emphasis link-underline link-underline-opacity-0">
-                                <h5 class="card-title">{{ $page->title }}</h5>
-                                <p class="card-text">{{ Str::limit($page->excerpt, 130) }}</p>
-                                <p class="card-text">
-                                    <small class="text-body-secondary">{{ $page->created_at->diffForHumans() }}
-                                    </small>
-                                </p>
+                                <a href="{{ route('page.posts', $page) }}"
+                                   class="link-body-emphasis link-underline link-underline-opacity-0">
+                                    <h5 class="card-title">{{ $page->title }}</h5>
+                                    <p class="card-text">{{ Str::limit($page->excerpt, 120) }}</p>
                                 </a>
                             </div>
                         </div>
