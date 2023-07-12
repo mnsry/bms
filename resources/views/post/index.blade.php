@@ -14,36 +14,29 @@
         </div>
     </section>
 
-    <div class="album pt-2 bg-body-tertiary">
-        <div class="container">
-            <div class="row justify-content-center mx-1">
-                @foreach($page->posts as $post)
-                    <div class="card my-2" style="max-width: 1000px;">
-                        <div class="row">
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <a href="{{ route('post.show', $post) }}"
-                                       class="link-body-emphasis link-underline link-underline-opacity-0">
-                                        <h5 class="card-title">{{ $post->title }}</h5>
-                                        <p class="card-text">{{ $post->excerpt }}</p>
-                                        <p class="card-text"><small
-                                                class="text-body-secondary">{{ $post->created_at->diffForHumans() }}</small>
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-4 py-2">
-                                <a href="{{ route('post.show', $post) }}"
-                                   class="link-body-emphasis link-underline link-underline-opacity-0">
-                                    <img src="{{ Voyager::Image($post->image) }}" height="200"
-                                         class="card-img-top rounded"
-                                         alt="...">
+    <div class="container-fluid bg-body-tertiary">
+        <div class="row justify-content-center p-2">
+            @foreach($page->posts as $post)
+                <div class="card m-2 p-2" style="max-width: 400px;">
+                    <div class="row g-0">
+                        <div class="col-8">
+                            <div class="card-body">
+                                <a href="{{ route('post.show', $post) }}" class="link-body-emphasis link-underline link-underline-opacity-0">
+                                    <h5 class="card-title">{{ $post->title }}</h5>
+                                    <p class="card-text">{{ Str::limit($post->excerpt, 130) }}</p>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary">{{ $post->created_at->diffForHumans() }}
+                                        </small>
+                                    </p>
                                 </a>
                             </div>
                         </div>
+                        <div class="col-4">
+                            <img src="{{ Voyager::Image($post->image) }}" class="img-fluid rounded" alt="...">
+                        </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
     </div>
 
