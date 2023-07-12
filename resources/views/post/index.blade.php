@@ -24,12 +24,12 @@
                                 <a href="{{ route('post.show', $post) }}"
                                    class="link-body-emphasis link-underline link-underline-opacity-0">
                                     <h5 class="card-title">{{ $post->title }}</h5>
-                                    <p class="card-text">{{ Str::limit($post->excerpt, 120) }}</p>
+                                    <p class="card-text">{{ Str::limit($post->excerpt, 100) }}</p>
                                 </a>
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="{{ Voyager::Image($post->image) }}" class="img-fluid rounded" alt="...">
+                            <img src="{{ Voyager::Image($post->image) }}" class="img-fluid rounded" alt="{{ $post->title }}">
                         </div>
                     </div>
                 </div>

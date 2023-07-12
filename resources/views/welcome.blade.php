@@ -44,12 +44,12 @@
                                 <a href="{{ route('page.posts', $page) }}"
                                    class="link-body-emphasis link-underline link-underline-opacity-0">
                                     <h5 class="card-title">{{ $page->title }}</h5>
-                                    <p class="card-text">{{ Str::limit($page->excerpt, 120) }}</p>
+                                    <p class="card-text">{{ Str::limit($page->excerpt, 100) }}</p>
                                 </a>
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="{{ Voyager::Image($page->image) }}" class="img-fluid rounded" alt="...">
+                            <img src="{{ Voyager::Image($page->image) }}" class="img-fluid rounded" alt="{{ $page->title }}">
                         </div>
                     </div>
                 </div>
