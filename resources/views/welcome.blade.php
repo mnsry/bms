@@ -44,7 +44,7 @@
                                 <a href="{{ route('page.posts', $page) }}"
                                    class="link-body-emphasis link-underline link-underline-opacity-0">
                                     <h5 class="card-title">{{ $page->title }}</h5>
-                                    <p class="card-text">{{ Str::limit($page->excerpt, 100) }}</p>
+                                    <p class="card-text">{{ Str::limit($page->excerpt, 90) }}</p>
                                 </a>
                             </div>
                         </div>

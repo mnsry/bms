@@ -24,7 +24,7 @@
                                 <a href="{{ route('post.show', $post) }}"
                                    class="link-body-emphasis link-underline link-underline-opacity-0">
                                     <h5 class="card-title">{{ $post->title }}</h5>
-                                    <p class="card-text">{{ Str::limit($post->excerpt, 100) }}</p>
+                                    <p class="card-text">{{ Str::limit($post->excerpt, 90) }}</p>
                                 </a>
                             </div>
                         </div>
