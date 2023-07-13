@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-12 mx-auto">
                     <div class="alert alert-success">
-                        <p>درخواست شما ثبت شد.</p>
+                        <p>درخواست شما ثبت شد همکاران ما در اسرع وقت با شما تماس خواهند گرفت.</p>
                     </div>
                 </div>
             </div>
