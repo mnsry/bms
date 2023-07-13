@@ -25,8 +25,8 @@
 
         <div class="container-fluid bg-body-tertiary">
             <div class="row">
-                <div class="col-12 mx-auto">
-                    <div class="alert alert-success pt-2">
+                <div class="col-12">
+                    <div class="alert alert-success pb-0">
                         <p>درخواست شما ثبت شد همکاران ما در اسرع وقت با شما تماس خواهند گرفت.</p>
                     </div>
                 </div>
