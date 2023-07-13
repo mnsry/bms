@@ -11,7 +11,9 @@
         <div class="row">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <h1 class="fw-light">فرم ثبت درخواست</h1>
-                <p class="lead text-body-secondary">برای دریافت خدمات با ما در تماس باشید</p>
+                <p class="lead text-body-secondary">
+                    در صورت تمایل مشاوره رایگان و ارتباط با ما از طریق فرم زیر با ما در تماس باشید
+                </p>
             </div>
         </div>
     </section>

@@ -23,7 +23,7 @@
 
     @if(session('form') == 'created' )
 
-        <div class="container">
+        <div class="container bg-body-tertiary">
             <div class="row">
                 <div class="col-12 mx-auto">
                     <div class="alert alert-success">
