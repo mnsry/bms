@@ -1,8 +1,8 @@
 @extends('layout.master')
 
-@section('description', 'خانه هوشمند')
-@section('keywords', 'bms, خانه هوشمند, طراحی bms, برق صنعتی, اتوماسیون خانگی')
-@section('title', 'خانه هوشمند')
+@section('description', $page->meta_description)
+@section('keywords', $page->meta_keywords)
+@section('title', $page->title)
 
 @section('content')
 
