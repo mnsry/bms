@@ -49,12 +49,13 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="{{ Voyager::Image($page->image) }}" class="" alt="{{ $page->title }}">
+                            <img src="{{ Voyager::Image($page->image) }}" class="img-fluid rounded" alt="{{ $page->title }}">
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
+{{--  021  --}}
 
 @endsection
